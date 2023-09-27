@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
-
-"""
-import list type from typing module
-"""
-
+"""Contains a function that sums a list of floats"""
 from typing import List
 
-"""
-takes a list of floats as arg and returns sum as float
-"""
 
-def sum_list(input_list: List) -> float:
-    k = 0
-    for i in input_list:
-      k += i
-    return k
+def sum_list(input_list: List[float]) -> float:
+    """Sums a list of floats
 
-"""
-takes one arg which is a list and returns a float which is the sum of the list
-"""
+    Args:
+        input_list (list): A list of floats
+
+    Returns:
+        float: The sum of the floats in the list
+    """
+    if input_list is None:
+        return 0
+    else:
+        return sum(input_list)
